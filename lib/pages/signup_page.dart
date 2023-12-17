@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +48,7 @@ class LoginPage extends StatelessWidget {
                   children: [
                     //Container for 'Enter phone number'//
                     Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 10,),
                       decoration: BoxDecoration(
                         border: Border.all(
                           color: Colors.grey.shade800,
@@ -60,14 +58,13 @@ class LoginPage extends StatelessWidget {
                       ),
                       child: TextFormField(
                         keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             hintText: 'Enter phone number',
                             border: InputBorder.none,
-                            hintStyle: GoogleFonts.questrial(
-                                textStyle: const TextStyle(
+                            hintStyle: TextStyle(
                               fontSize: 13,
                               color: Colors.grey,
-                            ))),
+                            )),
                       ),
                     ),
                     //End of Container "Enter phone number"//
@@ -88,37 +85,19 @@ class LoginPage extends StatelessWidget {
                       ),
                       child: TextFormField(
                         obscureText: true,
-                        decoration: InputDecoration(
-                            hintText: 'Password',
+                        decoration: const InputDecoration(
+                            hintText: 'Pick a strog password',
                             border: InputBorder.none,
-                            hintStyle: GoogleFonts.questrial(
-                              textStyle: const TextStyle(
-                                fontSize: 13,
-                                color: Colors.grey,
-                              )
+                            hintStyle: TextStyle(
+                              fontSize: 13,
+                              color: Colors.grey,
                             )),
                       ),
                     ),
                     //End of Container for Password//
 
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 20),
 
-                    //Container for Forgot Password//
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 10),
-                        alignment: Alignment.centerRight,
-                        child: Text("Forgot Password?",
-                            style: GoogleFonts.questrial(
-                                textStyle: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blue,
-                            ))),
-                      ),
-                    ),
-                    //End of Container for Forgot Password//
                   ],
                 ),
               ),
@@ -137,7 +116,7 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.blue,
                 ),
-                child: Text('Log In',
+                child: Text('Sign Up',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.questrial(
                         textStyle: const TextStyle(
@@ -151,12 +130,12 @@ class LoginPage extends StatelessWidget {
                 height: 50,
               ),
 
-              //Container for "Don't have an account"//
+              //Container for "Don't have an account"//  
               SizedBox(
                 height: 30,
                 width: MediaQuery.of(context).size.width - 60,
                 child: Text(
-                  "Don't have an account?",
+                  "Already have an account?",
                   textAlign: TextAlign.start,
                   style: GoogleFonts.questrial(
                       textStyle: const TextStyle(
@@ -169,19 +148,19 @@ class LoginPage extends StatelessWidget {
 
               //Container for Create account Button//
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  
+                },
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 20),
-                  padding: const EdgeInsets.only(
-                    top: 15,
-                  ),
+                  padding: const EdgeInsets.only(top: 15,),
                   height: 50,
                   width: MediaQuery.of(context).size.width - 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.grey.shade800,
                   ),
-                  child: Text('Create account',
+                  child: Text('Log In',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.questrial(
                           textStyle: const TextStyle(
